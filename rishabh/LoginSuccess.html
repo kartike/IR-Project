@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LoginSuccess</title>
+    <link rel="icon" href="manipal-university-office.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+    $("#sem").on("change", function(){
+        var val = $("#sem").val();
+        $('#sub').empty().append('<option val="">Select Subject</option>');
+        if(val == "3"){
+            $('#sub').append('<option val="OOP">OOP</option>');
+            $('#sub').append('<option val="DS">DS</option>');
+            $('#sub').append('<option val="PDC">PDC</option>');
+            $('#sub').append('<option val="DSM">DSM</option>');
+            $('#sub').append('<option val="MATHS">MATHS</option>');
+        }
+        else if(val == "4"){
+            $('#sub').append('<option val="COMP">COMP</option>');
+            $('#sub').append('<option val="CNW">CNW</option>');
+            $('#sub').append('<option val="DBS">DBS</option>');
+            $('#sub').append('<option val="SE">SE</option>');
+            $('#sub').append('<option val="MATHS">MATHS</option>');
+        }
+        else if(val == "5"){
+            $('#sub').append('<option val="ES">ES</option>');
+            $('#sub').append('<option val="OS">OS</option>');
+            $('#sub').append('<option val="ITT">ITT</option>');
+            $('#sub').append('<option val="DAA">DAA</option>');
+            $('#sub').append('<option val="PE">PE</option>'); }
+    });
+});
+    </script>
+</head>
+    <body>
+        <h2><center>Please select the subject</center></h2>
+        <form>
+        <div class="form-group">
+            <label for="sem">Semester:</label>
+            <select class="form-control" id="sem">
+                <option value="" selected>Select semester</option>
+                <option value="3">III</option>
+                <option value="4">IV</option>
+                <option value="5">V</option>
+                <option value="6">VI</option>
+                <option value="7">VII</option>
+            </select>
+        </div>
+            <div class="form-group">
+                <label for="sub">Subject:</label>
+                <select class="form-control" id="sub">
+                    <option value="" selected>Select subject</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Proceed</button>
+        </form>
+    </body>
+</html>
