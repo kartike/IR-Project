@@ -2,15 +2,16 @@
 <html lang="en">
 	<head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css">
-        <title>ITT Project
-		</title>
-        
+        <meta name="theme-color" content="#1A237E">
+        <title>ITT Project</title>
         <style> 
-            h1 
-            {
+            h1 {
                 font-family: 'Tangerine', serif;
                 font-size: 48px;
                 text-shadow: 4px 4px 4px #aaa;
@@ -18,67 +19,45 @@
         </style>
         <h1><center>Registration</center></h1>
 	</head>
-	<body>
-        <br>
+	<body><br><br>
         <div class="container">
             <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type = "text" class="form-control" id="name" placeholder="Enter name">
+                </div>
                 
-            <div class="form-check">What do you most like about our University?<br>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">Students
-                </label>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">Location
-                </label>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">Campus
-                </label>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">Atmosphere
-                </label>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">Dorm Rooms
-                </label>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">Sports
-                </label>
-                <br><br>
-            </div> 
-            How did you become interested in our university?
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                    Friends
-                </label>
-            </div>
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    Television
-                </label>
-            </div>
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                    Internet
-                </label>
-            </div>
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                    Other
-                </label>
-            </div>
-            <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea class="form-control" rows="5" id="comment"></textarea>
-            </div>
-            <div class="btn-group btn-group-justified">
-                <a href="thank.html" button type="button" class="btn btn-success">Submit</button>
-                <a href="index.html" button type="button" class="btn btn-danger">Reset</button>
-            </div>
+                <div class="form-group">
+                    <label for="initials">Initials:</label>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Eg.- AKC"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a>
+                    <input type = "text" class="form-control" id="initial" placeholder="Enter initials">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div> 
+                
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cnf_pwd">Confirm Password:</label>
+                    <input type="password" class="form-control" id="cnf_pwd" placeholder="Enter password">
+                </div>
+                
+                <div class="btn-group btn-group-justified">
+                        <a href="index.html" class="btn btn-success" role="button">Submit</a>
+                        <a href="index.html" class="btn btn-danger" role="button">Reset</a>
+                </div>
             </form>
         </div>
-        
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+            });
+        </script>
 	</body>
 </html>
