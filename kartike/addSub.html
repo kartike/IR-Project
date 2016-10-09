@@ -112,8 +112,7 @@
                 
                 <div class="form-group">
                     <label for="subcode">Subject Code:</label>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Eg.- ICT-XXXX"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a>
-                    
+                    <a href="#" data-toggle="tooltip" title="Eg.- ICT-XXXX"><span class="glyphicon glyphicon-question-sign"></span></a>
                     <input type = "text" class="form-control" id="initial">
                 </div>
                 
@@ -125,5 +124,10 @@
                 
             </form>
         </div>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+            });
+        </script>
     </body>
 </html>
