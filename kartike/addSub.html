@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css">
+        <meta name="theme-color" content="#1A237E">
+        <title>ITT Project</title>
+        <style> 
+            h1 {
+                font-family: 'Tangerine', serif;
+                font-size: 48px;
+                text-shadow: 4px 4px 4px #aaa;
+            }
+        </style>
+        <h1><center>Add Subjects</center></h1>
+        
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("#sem").on("change", function(){
+                var branch = $("#branch").val();
+                var sem =$("#sem").val();
+                $('#sub').empty().append('<option val=""></option>');
+                if(branch=="CCE"){
+                    if(sem == "3"){
+                        $('#sub').append('<option val="OOP">OOP</option>');
+                        $('#sub').append('<option val="DS">DS</option>');
+                        $('#sub').append('<option val="DC">DC</option>');
+                        $('#sub').append('<option val="DSD">DSD</option>');
+                        $('#sub').append('<option val="MATHS">MATHS</option>');
+                    }
+                    else if(sem = "4"){
+                        
+                    }
+                    else if(sem = "5"){
+                        
+                    }
+                    else if(sem = "6"){
+                        
+                    }
+                    else if(sem = "7"){
+                        
+                    }
+                }
+                else if(branch== "IT" ){
+                    if(sem == "3"){
+                        $('#sub').append('<option val="OOP">OOP</option>');
+                        $('#sub').append('<option val="DS">DS</option>');
+                        $('#sub').append('<option val="PDC">PDC</option>');
+                        $('#sub').append('<option val="DSM">DSM</option>');
+                        $('#sub').append('<option val="MATHS">MATHS</option>');
+                    }
+                    else if(sem == "4"){
+                        $('#sub').append('<option val="COMP">COMP</option>');
+                        $('#sub').append('<option val="CNW">CNW</option>');
+                        $('#sub').append('<option val="DBS">DBS</option>');
+                        $('#sub').append('<option val="SE">SE</option>');
+                        $('#sub').append('<option val="MATHS">MATHS</option>');
+                    }
+                    else if(sem == "5"){
+                        $('#sub').append('<option val="ES">ES</option>');
+                        $('#sub').append('<option val="OS">OS</option>');
+                        $('#sub').append('<option val="ITT">ITT</option>');
+                        $('#sub').append('<option val="DAA">DAA</option>');
+                        $('#sub').append('<option val="PE">PE</option>'); 
+                    }
+                    else if(sem = "6"){
+                        
+                    }
+                    else if(sem = "7"){
+                        
+                    }
+                }
+            });
+        });
+    </script>
+	</head>
+	<body><br><br>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="branch">Branch:</label>
+                    <select class="form-control" id="branch">
+                        <option value="" selected></option>
+                        <option value="CCE">CCE</option>
+                        <option value="IT">IT</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sem">Semester:</label>
+                    <select class="form-control" id="sem">
+                        <option value="" selected></option>
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                        <option value="5">V</option>
+                        <option value="6">VI</option>
+                        <option value="7">VII</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sub">Subject:</label>
+                    <select class="form-control" id="sub">
+                        <option value="" selected></option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subcode">Subject Code:</label>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Eg.- ICT-XXXX"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a>
+                    
+                    <input type = "text" class="form-control" id="initial">
+                </div>
+                
+                <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn btn-success" role="button" type="submit">Add</a>
+                    <a href="#" class="btn btn-primary" role="button" type="button">Home</a>
+                    <a href="home.html" class="btn btn-danger" role="button" type ="reset">Reset</a>
+                </div>
+                
+            </form>
+        </div>
+    </body>
+</html>
